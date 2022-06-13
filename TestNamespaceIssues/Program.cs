@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using IronXL;
 using IronXL.Drawing.Images;
-//using NPOI.OpenXmlFormats.Spreadsheet;
-//using NPOI.SS.UserModel.Charts;
-//using NPOI.Util;
+using NPOI.OpenXmlFormats.Spreadsheet;
+using NPOI.SS.UserModel.Charts;
+using NPOI.Util;
 
 namespace TestNamespaceIssues
 {
@@ -11,6 +11,8 @@ namespace TestNamespaceIssues
     {
         static void Main(string[] args)
         {
+            IronXL.Xml.Spreadsheet.CT_Authors authors = new IronXL.Xml.Spreadsheet.CT_Authors();
+
             WorkSheet ass = WorkBook.Load("C:\\Users\\artem\\Downloads\\TestData.xlsx").DefaultWorkSheet;
 
             IImage pic = ass.Images[0];
